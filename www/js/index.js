@@ -43,11 +43,21 @@ var app = {
             StatusBar.hide();
             StatusBar.backgroundColorByHexString('#cccccc');
         }
-        
+
+
+
+
+
+
+        //================================================
+        // MINHA PARTE DO CÓDIGO
+        //================================================
+
         let audio = document.getElementById("audio");
         audio.loop = true;
         audio.load();
         var duracao = 180;
+        var auxiliar = 180;
         var min_inic = Math.floor(duracao / 60);
         var seg_inic = Math.floor(duracao % 60);
         $('#tempo').innerText = min_inic + ":" + seg_inic;
@@ -97,6 +107,7 @@ var app = {
 
             if(minutos == 0 && segundos == 0){
                 limpar();
+                duracao = auxiliar;
             }
         });
 
@@ -106,6 +117,7 @@ var app = {
 
         $('#btn_3').addEventListener("click", function(){
             duracao = 180;
+            auxiliar = 180;
             audio.load();
             limpar();
             $('#container-tempo>.atual').classList.remove("atual");
@@ -113,6 +125,7 @@ var app = {
         });
         $('#btn_5').addEventListener("click", function(){
             duracao = 300;
+            auxiliar = 300;
             audio.load();
             limpar();
             $('#container-tempo>.atual').classList.remove("atual");
@@ -120,6 +133,7 @@ var app = {
         });
         $('#btn_10').addEventListener("click", function(){
             duracao = 600;
+            auxiliar = 600;
             audio.load();
             limpar();
             $('#container-tempo>.atual').classList.remove("atual");

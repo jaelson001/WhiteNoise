@@ -121,7 +121,7 @@ var app = {
         });
 
         $('#btn_chuva').addEventListener("click", function(){
-            audio.src = window.location + "/audio/chuva.mp3"
+            audio.src = "audio/chuva.mp3"
             audio.load();
             limpar();
             $('#container-som>.atual').classList.remove("atual");
@@ -129,7 +129,7 @@ var app = {
         });
 
         $('#btn_praia').addEventListener("click", function(){
-            audio.src = window.location + "/audio/praia.mp3"
+            audio.src = "audio/praia.mp3"
             audio.load();
             limpar();
             $('#container-som>.atual').classList.remove("atual");
@@ -137,7 +137,7 @@ var app = {
         });
 
         $('#btn_fogueira').addEventListener("click", function(){
-            audio.src = window.location + "/audio/fogueira.mp3"
+            audio.src = "audio/fogueira.mp3"
             audio.load();
             limpar();
             $('#container-som>.atual').classList.remove("atual");

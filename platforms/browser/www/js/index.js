@@ -38,6 +38,12 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
+        if (cordova.platformId == 'android') {
+            StatusBar.overlaysWebView(true);
+            StatusBar.hide();
+            StatusBar.backgroundColorByHexString('#cccccc');
+        }
+        
         let audio = document.getElementById("audio");
         audio.loop = true;
         audio.load();

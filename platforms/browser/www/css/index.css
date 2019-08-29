@@ -1,12 +1,16 @@
 :root{
-		--primaria: #4459a7;
+		--w-primary: #4459a7;
+		--w-background:#fff;
+
+		--b-primary: #2678ed;
+		--b-background:linear-gradient(to bottom, #414455, #242835);
 	}
 html,body{
 	padding: 0;
 	margin: 0;
 	background-repeat: no-repeat;
 	height: 100vh;
-	color: var(--primaria);
+	color: var(--w-primary);
     font-size:12px;
     width:100%;
 }
@@ -34,8 +38,8 @@ html,body{
 	height: 20px;
 	background: transparent;
 	border: none;
-	border-top: 2px solid var(--primaria);
-	border-bottom: 2px solid var(--primaria);
+	border-top: 2px solid var(--w-primary);
+	border-bottom: 2px solid var(--w-primary);
 	margin: 40px 15px;
 	position: absolute;
 	right: 10px;
@@ -44,7 +48,7 @@ html,body{
 #btn_menu::after {
 	content: "";
 	height: 2px;
-	background: #4459a7;
+	background: var(--w-primary);
 	width: 100%;
 	display: block;
 	position: absolute;
@@ -73,8 +77,8 @@ html,body{
 }
 .atual{
 	background: #fff !important;
-	color: var(--primaria) !important;
-	border:2px solid var(--primaria) !important;
+	color: var(--w-primary) !important;
+	border:2px solid var(--w-primary) !important;
 }
 #menu {
 	position: fixed;
@@ -105,10 +109,10 @@ html,body{
 .hora {
 	padding: 20px;
 	border-radius: 50%;
-	border: 3px solid #4459a7;
+	border: 3px solid var(--w-primary);
 	height: 150px;
 	line-height: 60px;
-	color: #4459a7;
+	color: var(--w-primary);
 	width: 150px;
 	margin: 0;
 	box-shadow: 0px 0px 0px 5px #4459a777;
@@ -138,7 +142,7 @@ html,body{
 .play::after {
 	content: "";
 	background: transparent;
-	border-top: 10px solid var(--primaria);
+	border-top: 10px solid var(--w-primary);
 	border-right: 10px solid transparent;
 	border-left: 10px solid transparent;
 	position: absolute;
@@ -149,7 +153,7 @@ html,body{
 .pause::after {
 	content: "II";
 	background: transparent;
-	color: var(--primaria);
+	color: var(--w-primary);
 	position: absolute;
 	left: 50%;
 	top: 50%;
@@ -163,7 +167,7 @@ html,body{
 	margin: 20px auto;
 	height: 35px;
 	border-radius: 35px;
-	background: #4459a7;
+	background: var(--w-primary);
 	color: #fff;
 	border:none;
 	cursor: pointer;

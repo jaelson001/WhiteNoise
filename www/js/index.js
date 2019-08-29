@@ -53,11 +53,32 @@ var app = {
         // MINHA PARTE DO CÓDIGO
         //================================================
 
+        var configuracoes = null;
+
+
+        function salvar(){
+            localStorage.setItem('configuracoes', JSON.stringify(configuracoes));
+        }
+        function carregar(){
+            if (!localStorage.getItem("configuracoes")) {
+                configuracoes = {
+                    volume:5,
+                    audio:"audio/chuva.mp3",
+                    duracao:"180"
+                };
+            }else{
+                configuracoes = JSON.parse(localStorage.getItem('configuracoes'));
+            }
+            
+        }
+
+        carregar();
         let audio = document.getElementById("audio");
+        audio.setAttribute("audio",configuracoes.audio);
         audio.loop = true;
         audio.load();
-        var duracao = 180;
-        var auxiliar = 180;
+        var duracao = configuracoes.duracao;
+        var auxiliar = duracao;
         var min_inic = Math.floor(duracao / 60);
         var seg_inic = Math.floor(duracao % 60);
         $('#tempo').innerText = min_inic + ":" + seg_inic;
@@ -117,6 +138,8 @@ var app = {
 
         $('#btn_3').addEventListener("click", function(){
             duracao = 180;
+            configuracoes.duracao = 180;
+            salvar();
             auxiliar = 180;
             audio.load();
             limpar();
@@ -125,6 +148,8 @@ var app = {
         });
         $('#btn_5').addEventListener("click", function(){
             duracao = 300;
+            configuracoes.duracao = 300;
+            salvar();
             auxiliar = 300;
             audio.load();
             limpar();
@@ -133,6 +158,8 @@ var app = {
         });
         $('#btn_10').addEventListener("click", function(){
             duracao = 600;
+            configuracoes.duracao = 600;
+            salvar();
             auxiliar = 600;
             audio.load();
             limpar();
@@ -142,6 +169,8 @@ var app = {
 
         $('#btn_chuva').addEventListener("click", function(){
             audio.src = "audio/chuva.mp3";
+            configuracoes.audio = "audio/chuva.mp3";
+            salvar();
             $('#titulo').innerText = "Chuva";
             audio.load();
             limpar();
@@ -151,6 +180,8 @@ var app = {
 
         $('#btn_praia').addEventListener("click", function(){
             audio.src = "audio/praia.mp3";
+            configuracoes.audio = "audio/praia.mp3";
+            salvar();
             $('#titulo').innerText = "Praia";
             audio.load();
             limpar();
@@ -160,6 +191,8 @@ var app = {
 
         $('#btn_fogueira').addEventListener("click", function(){
             audio.src = "audio/fogueira.mp3";
+            configuracoes.audio = "audio/fogueira.mp3";
+            salvar();
             $('#titulo').innerText = "Fogueira";
             audio.load();
             limpar();

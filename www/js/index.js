@@ -74,11 +74,11 @@ var app = {
         }
         function tema(tema){
             if(tema=="dia"){
-                document.body.setAttribute("bg-color", "#ffffff");
-                document.body.setAttribute("fg-color", "#4459a7");
+                document.body.classList.remove("noite");
+                document.body.classList.add("dia");
             }else if(tema=="noite"){
-                document.body.setAttribute("bg-color", "linear-gradient(to bottom, #414455, #242835)");
-                document.body.setAttribute("fg-color", "#2678ed");
+                document.body.classList.remove("dia");
+                document.body.classList.add("noite");
             }
             salvar();
         }

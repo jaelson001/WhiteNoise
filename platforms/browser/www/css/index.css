@@ -1,7 +1,25 @@
-body{
-		--primary: attr(fg-color);
-		--background:attr(bg-color);
-	}
+:root{
+	--primary:#4459a7;
+	--background: #ffffff;
+}
+.dia{
+	background: #fff;
+	color: #4459a7;
+	--primary:#4459a7;
+	--background: #fff;
+}
+.noite{
+	background: linear-gradient(to bottom, #414455, #242835);
+	color: #2678ed;
+	--primary:#2678ed;
+	--background: #242835;
+}
+
+.dia *, .noite *{
+	color: inherit !important;
+}
+
+
 html,body{
 	padding: 0;
 	margin: 0;
@@ -134,7 +152,7 @@ html,body{
 	border: none;
 	margin: 0 auto;
 	display: block;
-	background: #fff;
+	background: transparent;
 	position: relative;
 	cursor: pointer;
 }
@@ -166,10 +184,12 @@ html,body{
 	margin: 20px auto;
 	height: 35px;
 	border-radius: 35px;
-	background: var(--primary);
-	color: #fff;
 	border:none;
 	cursor: pointer;
+}
+.btn:not(.atual), .btn_tema:not(.atual) {
+	background: var(--primary) !important;
+	color: var(--background) !important;
 }
 
 .btn_vol{

@@ -184,3 +184,14 @@ html,body{
 	padding-bottom: 20px;
 	justify-content: center;
 }
+
+.btn_tema {
+	width: 40%;
+	padding: 5px 10px;
+	border-radius: 20px;
+	font-size: 14px;
+	background: var(--w-primary);
+	color: var(--w-background);
+	border: 2px solid var(--w-primary);
+	margin-bottom: 20px;
+}

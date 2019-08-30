@@ -64,7 +64,8 @@ var app = {
                 configuracoes = {
                     volume:5,
                     audio:"audio/chuva.mp3",
-                    duracao:"180"
+                    duracao:"180",
+                    tema:"dia"
                 };
             }else{
                 configuracoes = JSON.parse(localStorage.getItem('configuracoes'));
@@ -224,6 +225,14 @@ var app = {
             audio.volume = 1.0;
             $('#container-volume>.atual').classList.remove("atual");
             this.classList.add("atual");
+        });
+
+        $('#btn_tema-dia').addEventListener("click",function(){
+     
+        });
+
+        $('#btn_tema-noite').addEventListener("click",function(){
+
         });
     }
 };

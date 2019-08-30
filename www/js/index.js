@@ -60,7 +60,7 @@ var app = {
             localStorage.setItem('configuracoes', JSON.stringify(configuracoes));
         }
         function carregar(){
-            if (!localStorage.getItem("configuracoes")) {
+            if (localStorage.getItem("configuracoes") == null) {
                 configuracoes = {
                     volume:5,
                     audio:"audio/chuva.mp3",
@@ -76,9 +76,11 @@ var app = {
             if(tema=="dia"){
                 document.body.classList.remove("noite");
                 document.body.classList.add("dia");
+                configuracoes.tema = "dia";
             }else if(tema=="noite"){
                 document.body.classList.remove("dia");
                 document.body.classList.add("noite");
+                configuracoes.tema = "noite";
             }
             salvar();
         }

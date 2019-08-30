@@ -2,17 +2,20 @@
 	--primary:#4459a7;
 	--background: #ffffff;
 }
-.dia{
+.dia, .dia>#menu{
 	background: #fff;
 	color: #4459a7;
 	--primary:#4459a7;
 	--background: #fff;
 }
-.noite{
+.noite, .noite>#menu{
 	background: linear-gradient(to bottom, #414455, #242835);
-	color: #2678ed;
-	--primary:#2678ed;
+	color: #08df0f;
+	--primary:#08df0f;
 	--background: #fff;
+}
+.noite .hora{
+	box-shadow: 0px 0px 0px 5px #08df0f77;
 }
 
 .dia *, .noite *{
@@ -92,7 +95,7 @@ html,body{
 	left: 50%;
 }
 .atual{
-	background: #fff !important;
+	background: transparent !important;
 	color: var(--primary) !important;
 	border:2px solid var(--primary) !important;
 }

@@ -12,7 +12,7 @@
 	background: linear-gradient(to bottom, #414455, #242835);
 	color: #2678ed;
 	--primary:#2678ed;
-	--background: #242835;
+	--background: #fff;
 }
 
 .dia *, .noite *{

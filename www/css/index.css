@@ -1,16 +1,14 @@
-:root{
-		--w-primary: #4459a7;
-		--w-background:#fff;
-
-		--b-primary: #2678ed;
-		--b-background:linear-gradient(to bottom, #414455, #242835);
+body{
+		--primary: attr(fg-color);
+		--background:attr(bg-color);
 	}
 html,body{
 	padding: 0;
 	margin: 0;
+	background: var(--bg-color);
 	background-repeat: no-repeat;
 	height: 100vh;
-	color: var(--w-primary);
+	color: var(--primary);
     font-size:12px;
     width:100%;
 }
@@ -38,8 +36,8 @@ html,body{
 	height: 20px;
 	background: transparent;
 	border: none;
-	border-top: 2px solid var(--w-primary);
-	border-bottom: 2px solid var(--w-primary);
+	border-top: 2px solid var(--primary);
+	border-bottom: 2px solid var(--primary);
 	margin: 40px 15px;
 	position: absolute;
 	right: 10px;
@@ -48,7 +46,7 @@ html,body{
 #btn_menu::after {
 	content: "";
 	height: 2px;
-	background: var(--w-primary);
+	background: var(--primary);
 	width: 100%;
 	display: block;
 	position: absolute;
@@ -77,8 +75,8 @@ html,body{
 }
 .atual{
 	background: #fff !important;
-	color: var(--w-primary) !important;
-	border:2px solid var(--w-primary) !important;
+	color: var(--primary) !important;
+	border:2px solid var(--primary) !important;
 }
 #menu {
 	position: fixed;
@@ -98,6 +96,7 @@ html,body{
 	text-align: center;
 	font-size: 30px;
 	margin-top: 40px;
+	color: var(--primary);
 }
 .subtitulo{
 	font-size: 20px;
@@ -109,10 +108,10 @@ html,body{
 .hora {
 	padding: 20px;
 	border-radius: 50%;
-	border: 3px solid var(--w-primary);
+	border: 3px solid var(--primary);
 	height: 150px;
 	line-height: 60px;
-	color: var(--w-primary);
+	color: var(--primary);
 	width: 150px;
 	margin: 0;
 	box-shadow: 0px 0px 0px 5px #4459a777;
@@ -142,7 +141,7 @@ html,body{
 .play::after {
 	content: "";
 	background: transparent;
-	border-top: 10px solid var(--w-primary);
+	border-top: 10px solid var(--primary);
 	border-right: 10px solid transparent;
 	border-left: 10px solid transparent;
 	position: absolute;
@@ -153,7 +152,7 @@ html,body{
 .pause::after {
 	content: "II";
 	background: transparent;
-	color: var(--w-primary);
+	color: var(--primary);
 	position: absolute;
 	left: 50%;
 	top: 50%;
@@ -167,7 +166,7 @@ html,body{
 	margin: 20px auto;
 	height: 35px;
 	border-radius: 35px;
-	background: var(--w-primary);
+	background: var(--primary);
 	color: #fff;
 	border:none;
 	cursor: pointer;
@@ -190,8 +189,8 @@ html,body{
 	padding: 5px 10px;
 	border-radius: 20px;
 	font-size: 14px;
-	background: var(--w-primary);
-	color: var(--w-background);
-	border: 2px solid var(--w-primary);
+	background: var(--primary);
+	color: var(--background);
+	border: 2px solid var(--primary);
 	margin-bottom: 20px;
 }

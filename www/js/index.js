@@ -72,8 +72,18 @@ var app = {
             }
             
         }
-
+        function tema(tema){
+            if(tema=="dia"){
+                document.body.setAttribute("bg-color", "#ffffff");
+                document.body.setAttribute("fg-color", "#4459a7");
+            }else if(tema=="noite"){
+                document.body.setAttribute("bg-color", "linear-gradient(to bottom, #414455, #242835)");
+                document.body.setAttribute("fg-color", "#2678ed");
+            }
+            salvar();
+        }
         carregar();
+        tema(configuracoes.tema);
         let audio = document.getElementById("audio");
         audio.setAttribute("audio",configuracoes.audio);
         audio.loop = true;
@@ -228,11 +238,17 @@ var app = {
         });
 
         $('#btn_tema-dia').addEventListener("click",function(){
-     
+            configuracoes.tema = "dia";
+            tema("dia");
+            this.classList.add("atual");
+            $('#btn_tema-noite').classList.remove("atual");
         });
 
         $('#btn_tema-noite').addEventListener("click",function(){
-
+            configuracoes.tema = "noite";
+            tema("noite");
+            this.classList.add("atual");
+            $('#btn_tema-dia').classList.remove("atual");
         });
     }
 };

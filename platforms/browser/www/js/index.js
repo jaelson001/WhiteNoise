@@ -87,9 +87,17 @@ var app = {
         carregar();
         tema(configuracoes.tema);
         let audio = document.getElementById("audio");
-        audio.setAttribute("audio",configuracoes.audio);
+        audio.src = configuracoes.audio;
         audio.loop = true;
-        audio.load();
+        if(configuracoes.audio == "audio/chuva.mp3"){
+            $('#titulo').innerText = "Chuva";
+        }
+        if(configuracoes.audio == "audio/praia.mp3"){
+            $('#titulo').innerText = "Praia";
+        }
+        if(configuracoes.audio == "audio/fogueira.mp3"){
+            $('#titulo').innerText = "Fogueira";
+        }
         var duracao = configuracoes.duracao;
         var auxiliar = duracao;
         var min_inic = Math.floor(duracao / 60);

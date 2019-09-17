@@ -10,12 +10,12 @@
 }
 .noite, .noite>#menu{
 	background: linear-gradient(to bottom, #414455, #242835);
-	color: #08df0f;
-	--primary:#08df0f;
+	color: #0898df;
+	--primary:#0898df;
 	--background: #fff;
 }
-.noite .hora{
-	box-shadow: 0px 0px 0px 5px #08df0f77;
+.noite .hora {
+	box-shadow: 0px 0px 25px 0px #0898df;
 }
 
 .dia *, .noite *{
